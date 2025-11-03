@@ -14,6 +14,7 @@ import { mockApi, ProjectRow } from '../services/mockApi';
 import KPIPill from '../components/evms/shared/KPIPill';
 import SparkLine from '../components/evms/shared/SparkLine';
 import ExportButton from '../components/evms/shared/ExportButton';
+import PageHeader from '../components/layout/PageHeader';
 
 export default function PortfolioPage() {
   const [projects, setProjects] = React.useState<ProjectRow[]>([]);
@@ -169,15 +170,12 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <Box sx={{padding: '85px 20px 0 0'}}>
-      <Box sx={{ mb: 3 }}>
-        <Typography variant="h4" gutterBottom>
-          Earned Value Management • Portfolio
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Scan projects, spot SPI/CPI risk, and jump into details.
-        </Typography>
-      </Box>
+    <Box>
+      <PageHeader 
+        title="Earned Value Management • Portfolio"
+        subtitle="Scan projects, spot SPI/CPI risk, and jump into details."
+        showSearch={false}
+      />
 
       {/* Toolbar */}
       <Card sx={{ mb: 2 }}>

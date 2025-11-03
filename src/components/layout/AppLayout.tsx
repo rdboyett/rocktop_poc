@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Box, { BoxProps } from '@mui/material/Box';
-import TopNav from './TopNav';
 import SideNav from './SideNav';
 import { SideNavProvider, useSideNav } from '../../context/SideNavContext';
 
@@ -14,10 +13,7 @@ const MainContent = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'isExpanded',
 })<MainContentProps>(({ theme, isExpanded }) => ({
   flexGrow: 1,
-  pt: 8, // Account for fixed TopNav height
-  pl: 1.25, // 10px
-  pr: 3,
-  pb: 3,
+  padding: '20px 20px 20px 0',
   marginLeft: '55px',
   transition: theme.transitions.create('margin-left', {
     easing: theme.transitions.easing.sharp,
@@ -30,7 +26,6 @@ function AppLayoutContent() {
   
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-      <TopNav />
       <SideNav />
       <MainContent component="main" isExpanded={isHovered || isLocked || isMenuOpen}>
         <Outlet />
