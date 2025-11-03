@@ -13,6 +13,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Divider from '@mui/material/Divider';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 import FolderIcon from '@mui/icons-material/Folder';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import UploadIcon from '@mui/icons-material/Upload';
@@ -39,6 +40,7 @@ interface SideNavProps {}
 
 const topNavItems = [
   { label: 'Portfolio', path: '/', icon: <DashboardIcon /> },
+  { label: 'Reports', path: '/reports', icon: <AssessmentIcon /> },
   { label: 'Analytics', path: '/analytics', icon: <AnalyticsIcon /> },
   { label: 'Project', path: '/project/alpha', icon: <FolderIcon /> },
   { label: 'WBS', path: '/project/alpha/wbs', icon: <AccountTreeIcon /> },

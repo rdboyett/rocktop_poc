@@ -7,6 +7,8 @@ import ProjectOverviewPage from './pages/ProjectOverviewPage';
 import WBSPage from './pages/WBSPage';
 import CADetailPage from './pages/CADetailPage';
 import WPDetailPage from './pages/WPDetailPage';
+import ReportsPage from './pages/ReportsPage';
+import CPRFormat1Page from './pages/reports/CPRFormat1Page';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="project/:projectId/wbs" element={<WBSPage />} />
             <Route path="project/:projectId/ca/:caId" element={<CADetailPage />} />
             <Route path="project/:projectId/wp/:wpCode" element={<WPDetailPage />} />
+            <Route path="reports" element={<ReportsPage />} />
+            <Route path="reports/cpr-format-1" element={<CPRFormat1Page />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
