@@ -91,6 +91,17 @@ export default function WBSPage() {
 
     if (!matchesSearch) return null;
 
+    const handleNodeClick = (e: React.MouseEvent) => {
+      e.stopPropagation();
+      // If it's a CA node, navigate to CA detail page
+      if (node.type === 'CA') {
+        navigate(`/project/${projectId}/ca/${node.id}`);
+      } else {
+        // Otherwise just select it to show details
+        setSelectedNode(node);
+      }
+    };
+
     return (
       <TreeItem
         key={node.id}
@@ -103,11 +114,9 @@ export default function WBSPage() {
               gap: 1, 
               py: 0.5,
               '&:hover': { bgcolor: 'action.hover' },
+              cursor: node.type === 'CA' ? 'pointer' : 'default',
             }}
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedNode(node);
-            }}
+            onClick={handleNodeClick}
           >
             <Typography variant="body2" fontWeight={600} sx={{ minWidth: 60 }}>
               {node.id}
