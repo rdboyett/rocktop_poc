@@ -11,6 +11,7 @@ import ReportsPage from './pages/ReportsPage';
 import CPRFormat1Page from './pages/reports/CPRFormat1Page';
 import UploadsPage from './pages/UploadsPage';
 import BulkProgressPage from './pages/BulkProgressPage';
+import ForecastPage from './pages/ForecastPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="reports/cpr-format-1" element={<CPRFormat1Page />} />
             <Route path="uploads" element={<UploadsPage />} />
             <Route path="bulk-progress" element={<BulkProgressPage />} />
+            <Route path="forecast" element={<ForecastPage />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
