@@ -10,6 +10,7 @@ import WPDetailPage from './pages/WPDetailPage';
 import ReportsPage from './pages/ReportsPage';
 import CPRFormat1Page from './pages/reports/CPRFormat1Page';
 import UploadsPage from './pages/UploadsPage';
+import BulkProgressPage from './pages/BulkProgressPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="reports" element={<ReportsPage />} />
             <Route path="reports/cpr-format-1" element={<CPRFormat1Page />} />
             <Route path="uploads" element={<UploadsPage />} />
+            <Route path="bulk-progress" element={<BulkProgressPage />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
