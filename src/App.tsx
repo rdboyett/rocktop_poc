@@ -9,6 +9,7 @@ import CADetailPage from './pages/CADetailPage';
 import WPDetailPage from './pages/WPDetailPage';
 import ReportsPage from './pages/ReportsPage';
 import CPRFormat1Page from './pages/reports/CPRFormat1Page';
+import UploadsPage from './pages/UploadsPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="project/:projectId/wp/:wpCode" element={<WPDetailPage />} />
             <Route path="reports" element={<ReportsPage />} />
             <Route path="reports/cpr-format-1" element={<CPRFormat1Page />} />
+            <Route path="uploads" element={<UploadsPage />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
