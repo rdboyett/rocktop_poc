@@ -14,6 +14,7 @@ import BulkProgressPage from './pages/BulkProgressPage';
 import ForecastPage from './pages/ForecastPage';
 import BaselinesPage from './pages/BaselinesPage';
 import AnalyticsPage from './pages/AnalyticsPage';
+import AlertsPage from './pages/AlertsPage';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="forecast" element={<ForecastPage />} />
             <Route path="baselines" element={<BaselinesPage />} />
             <Route path="analytics" element={<AnalyticsPage />} />
+            <Route path="alerts" element={<AlertsPage />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
