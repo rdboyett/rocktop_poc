@@ -9,6 +9,8 @@ import Chip from '@mui/material/Chip';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { mockApi, ProjectRow } from '../services/mockApi';
 import KPIPill from '../components/evms/shared/KPIPill';
@@ -175,6 +177,15 @@ export default function PortfolioPage() {
         title="Earned Value Management • Portfolio"
         subtitle="Scan projects, spot SPI/CPI risk, and jump into details."
         showSearch={false}
+        actions={
+          <Button
+            variant="contained"
+            startIcon={<AddIcon />}
+            onClick={() => navigate('/setup')}
+          >
+            New Project
+          </Button>
+        }
       />
 
       {/* Toolbar */}
