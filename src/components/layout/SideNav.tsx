@@ -53,7 +53,7 @@ const topNavItems = [
 const bottomNavItems = [
   { label: 'Alerts', path: '/alerts', icon: <NotificationsIcon /> },
   { label: 'Vendors', path: '/vendors', icon: <BusinessIcon /> },
-  { label: 'Settings', path: '/admin', icon: <SettingsIcon /> },
+  { label: 'Settings', path: '/settings', icon: <SettingsIcon /> },
 ];
 
 const ThemeToggleButton = () => {

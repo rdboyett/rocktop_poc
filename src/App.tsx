@@ -17,6 +17,7 @@ import AnalyticsPage from './pages/AnalyticsPage';
 import AlertsPage from './pages/AlertsPage';
 import SetupWizardPage from './pages/SetupWizardPage';
 import VendorsPage from './pages/VendorsPage';
+import SettingsPage from './pages/SettingsPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="alerts" element={<AlertsPage />} />
             <Route path="setup" element={<SetupWizardPage />} />
             <Route path="vendors" element={<VendorsPage />} />
+            <Route path="settings" element={<SettingsPage />} />
             {/* More routes will be added as pages are implemented */}
           </Route>
         </Routes>
